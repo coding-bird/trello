@@ -115,7 +115,10 @@
     }
 
     function previousIsSelected(element) {
-        return Array.from(element.parentNode.children).findIndex(el => el == element) !== 0 && Array.from(element.parentNode.children)[Array.from(element.parentNode.children).findIndex(el => el == element) - 2].style.opacity === '0.6'
+        let children = Array.from(element.parentNode.children)
+        let currentTargetIndex = children.findIndex(ele => ele == element)
+        let currentTargetLasttoLast = children[currentTargetIndex - 2]
+        return currentTargetIndex !== 0 && currentTargetLasttoLast.style.opacity === '0.6'
     }
 
     Controller.prototype.createDragPreview = function () {

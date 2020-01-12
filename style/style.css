@@ -49,6 +49,12 @@ p{
     display: none;
 }
 
+.dashed{
+    border: 1px dashed #ccc;
+    padding: 20px;
+    border-radius: 3px;
+}
+
 .header{
     width: 100%;
     background-color: #fff;
